@@ -10,7 +10,7 @@ def analyze_project_structure(project_root, exclude_self=True):
         # Exclude the build directory so its files are not added
         dirs[:] = [d for d in dirs if d.lower() != "build"]
         if exclude_self:
-            files = [f for f in files if f != "CppProjectPackageScriptCreator.py"]
+            files = [f for f in files if f != "CppProjectPackageScriptConstructor.py"]
         for file in files:
             file_path = os.path.join(root, file)
             relative_path = os.path.relpath(file_path, project_root)
